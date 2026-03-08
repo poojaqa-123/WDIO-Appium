@@ -15,12 +15,13 @@ beforeEach(async () => {
 })
 
 afterEach(async () => {
+    console.log("After Each hook :")
 
-    if (this.currentTest.state === 'passed') {
-        await browser.execute('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test Passed"}}')
-    } else {
-        await browser.execute('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test Failed"}}')
-    }
+    // if (this.currentTest.state === 'passed') {
+    //     await browser.execute('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test Passed"}}')
+    // } else {
+    //     await browser.execute('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test Failed"}}')
+    // }
 
 })
 after(async () => {
