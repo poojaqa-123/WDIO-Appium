@@ -17,8 +17,8 @@ jobs:
 
         - name: 🧪 Test
           env:
-            BROWSERSTACK_USER: ${{ secrets.BS_USER }}
-            BROWSERSTACK_KEY: ${{ secrets.BS_KEY }}
+            BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER }}
+            BROWSERSTACK_KEY: ${{ secrets.BROWSERSTACK_KEY }}
           run: npx wdio wdio.bs.conf.cjs --spec test/specs/android/add-note-screen.spec.js
 
         - name: 📦 Upload Logs
